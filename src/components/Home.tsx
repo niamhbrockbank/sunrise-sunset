@@ -1,6 +1,6 @@
-import Footer from "./components/Footer";
-import Inputs from "./components/Inputs";
-import Results from "./components/Results";
+import Footer from "./Footer";
+import Inputs from "./Inputs";
+import Results from "./Results";
 
 export default function Home(): JSX.Element {
   return (
