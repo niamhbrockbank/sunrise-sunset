@@ -30,20 +30,21 @@ export default function Results(): JSX.Element {
 
   //TODO: Convert to 24hr clock
   const { sunrise, sunset } = results.results;
-  const sunriseFormatted = formatTime(sunrise)
-  const sunsetFormatted = formatTime(sunset)
-  const current = moment().format('HH:mm')
+  const sunriseFormatted = formatTime(sunrise);
+  const sunsetFormatted = formatTime(sunset);
+  const current = moment().format("HH:mm");
+  console.log(current);
 
   return (
     <div className="results">
       <div className="sun_time">
-        <img className='sun_image' src='./sunrise.svg' />
+        <img className="sun_image" src="./sunrise.svg" alt="sunrise icon" />
         <h1 className="time">{sunriseFormatted}</h1>
         <p className="time_description">sunrise</p>
       </div>
 
       <div className="sun_time">
-        <img className='sun_image' src='./sunset.svg' />
+        <img className="sun_image" src="./sunset.svg" alt="sunset icon" />
         <h1 className="time">{sunsetFormatted}</h1>
         <p className="time_description">sunset</p>
       </div>
