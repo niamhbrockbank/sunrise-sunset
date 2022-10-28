@@ -21,7 +21,10 @@ export default function Inputs({ setLocation }: IProps): JSX.Element {
           value={long}
           onChange={(e) => setLong(e.target.value)}
         ></input>
-        <button id="submit_button" onClick={() => setLocation({ latitude: lat, longitude: long })}>
+        <button
+          id="submit_button"
+          onClick={() => setLocation({ latitude: lat, longitude: long })}
+        >
           Submit
         </button>
       </div>

@@ -22,16 +22,16 @@ input {
   padding: 0px 15px;
 }
 
-#submit_button{
+#submit_button {
   margin-top: 10px;
   padding: 5px 20px;
   background-color: whitesmoke;
   color: grey;
-  border : 2px solid grey;
+  border: 2px solid grey;
   border-radius: 7px;
 }
 
-#submit_button:hover{
+#submit_button:hover {
   background-color: grey;
   color: white;
 }
@@ -57,7 +57,7 @@ input {
   width: 40vw;
   max-width: 350px;
   padding-top: 25px;
-  margin-bottom : 40px;
+  margin-bottom: 40px;
 }
 
 .time {
@@ -77,4 +77,3 @@ input {
   left: 30pt;
   font-size: small;
 }
-
