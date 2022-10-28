@@ -17,6 +17,9 @@ export default function Results(): JSX.Element {
       const response = await fetch(
         "https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=today"
       );
+      //TODO: connect location to inputs
+      //TODO: Add inputs
+      //TODO: Add covert to GMT etc. from UTC
       const jsonBody: IResults = await response.json();
       setResults(jsonBody);
     };
