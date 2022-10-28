@@ -46,7 +46,8 @@ input {
 }
 
 .time {
-  font-size: min(5vw, 35pt);
+  font-size: min(10vw, 60pt);
+  margin: 0;
 }
 
 .time_description {
