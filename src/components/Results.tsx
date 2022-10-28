@@ -1,34 +1,32 @@
 import moment from "moment";
 import { useEffect, useState } from "react";
+import { ILocation, IResults } from "../types";
 import formatTime from "../utils/formatTime";
 
-interface IResults {
-  results: {
-    sunrise: string;
-    sunset: string;
-  };
+interface IProps{
+  location : ILocation
 }
 
-export default function Results(): JSX.Element {
+export default function Results({location} : IProps): JSX.Element {
   const [results, setResults] = useState<IResults>({
     results: { sunrise: "searching", sunset: "searching" },
   });
 
+  const {latitude, longitude} = location
+
   useEffect(() => {
     const fetchSunTimes = async () => {
       const response = await fetch(
-        "https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=today"
+        `https://api.sunrise-sunset.org/json?lat=${latitude}&lng=${longitude}&date=today`
       );
       //TODO: connect location to inputs
-      //TODO: Add inputs
       //TODO: Add covert to GMT etc. from UTC
       const jsonBody: IResults = await response.json();
       setResults(jsonBody);
     };
     fetchSunTimes();
-  }, []);
+  }, [location]);
 
-  //TODO: Convert to 24hr clock
   const { sunrise, sunset } = results.results;
   const sunriseFormatted = formatTime(sunrise);
   const sunsetFormatted = formatTime(sunset);

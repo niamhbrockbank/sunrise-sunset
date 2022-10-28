@@ -31,7 +31,7 @@ input {
 .sun_time {
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 6vw;
   padding: 20px;
   width: 400px;
   align-items: center;
@@ -60,4 +60,5 @@ input {
   position: fixed;
   bottom: 0px;
   left: 30pt;
+  font-size: small;
 }
