@@ -26,11 +26,21 @@ export default function Results(): JSX.Element {
     fetchSunTimes();
   }, []);
 
+  //TODO: Convert to 24hr clock
   const { sunrise, sunset } = results.results;
   return (
-    <>
-      <p>sunrise: {sunrise}</p>
-      <p>sunset: {sunset}</p>
-    </>
+    <div className="results">
+      <div className="sun_time">
+        <img className='sun_image' src='./sunrise.svg' />
+        <h1 className="time">{sunrise}</h1>
+        <p className="time_description">sunrise</p>
+      </div>
+
+      <div className="sun_time">
+        <img className='sun_image' src='./sunset.svg' />
+        <h1 className="time">{sunset}</h1>
+        <p className="time_description">sunset</p>
+      </div>
+    </div>
   );
 }
