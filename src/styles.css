@@ -38,7 +38,7 @@ input {
   border: 2px solid rgb(106, 103, 103);
 }
 
-#sun_remaining{
+#sun_remaining {
   display: block;
   text-align: center;
   margin-top: 40px;
@@ -46,7 +46,7 @@ input {
   font-size: x-large;
 }
 
-mark{
+mark {
   background-color: rgb(248, 232, 161);
 }
 
