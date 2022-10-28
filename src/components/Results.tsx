@@ -28,6 +28,7 @@ export default function Results({ location }: IProps): JSX.Element {
 
   const { sunrise, sunset } = results.results;
 
+  //TODO: convert to current time zone (all in UTC need to include BST)
   const sunriseFormatted = formatTime(sunrise);
   const sunsetFormatted = formatTime(sunset);
   const current = moment().format("HH:mm");

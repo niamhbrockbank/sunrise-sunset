@@ -30,7 +30,7 @@ input {
   background-color: whitesmoke;
   color: grey;
   border: 2px solid grey;
-  border-radius: 7px;
+  border-radius: 5px;
 }
 
 #submit_button:hover {
