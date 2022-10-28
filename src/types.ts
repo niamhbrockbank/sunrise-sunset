@@ -1,11 +1,11 @@
 export interface ILocation {
-    latitude: string;
-    longitude: string;
+  latitude: string;
+  longitude: string;
 }
 
 export interface IResults {
-    results: {
-      sunrise: string;
-      sunset: string;
-    };
-  }
+  results: {
+    sunrise: string;
+    sunset: string;
+  };
+}
