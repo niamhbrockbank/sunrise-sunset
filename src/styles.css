@@ -35,7 +35,7 @@ input{
     padding: 20px;
     width: 400px;
     align-items: center;
-    border: 1pt solid rgb(166, 162, 162);
+    background-color: rgb(229, 228, 229);
     border-radius: 10px;
 }
 

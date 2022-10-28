@@ -1,4 +1,6 @@
+import moment from "moment";
 import { useEffect, useState } from "react";
+import formatTime from "../utils/formatTime";
 
 interface IResults {
   results: {
@@ -28,17 +30,21 @@ export default function Results(): JSX.Element {
 
   //TODO: Convert to 24hr clock
   const { sunrise, sunset } = results.results;
+  const sunriseFormatted = formatTime(sunrise)
+  const sunsetFormatted = formatTime(sunset)
+  const current = moment().format('HH:mm')
+
   return (
     <div className="results">
       <div className="sun_time">
         <img className='sun_image' src='./sunrise.svg' />
-        <h1 className="time">{sunrise}</h1>
+        <h1 className="time">{sunriseFormatted}</h1>
         <p className="time_description">sunrise</p>
       </div>
 
       <div className="sun_time">
         <img className='sun_image' src='./sunset.svg' />
-        <h1 className="time">{sunset}</h1>
+        <h1 className="time">{sunsetFormatted}</h1>
         <p className="time_description">sunset</p>
       </div>
     </div>
