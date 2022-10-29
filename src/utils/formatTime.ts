@@ -13,10 +13,7 @@ export default function formatTime(time: string): string {
       return `${arr[0]}:${arr[1]}`;
     }
   } else {
-    if (
-      (daylightSaving && arr[0] === "13") ||
-      (daylightSaving && arr[0] === "12")
-    ) {
+    if ((daylightSaving === 1 && arr[0] === "13") || arr[0] === "12") {
       return `${arr[0]}:${arr[1]}`;
     } else {
       const twentyFourHour = parseInt(arr[0]) + 12;
