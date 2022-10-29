@@ -8,3 +8,5 @@ test("afternoon hours are converted right", () => {
 test("all instances have four time digits", () => {
   expect(formatTime("8:55:43 AM")).toBe("08:55");
 });
+
+test.todo("adjust for different time zones");
