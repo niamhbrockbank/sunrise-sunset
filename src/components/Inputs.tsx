@@ -1,30 +1,32 @@
 import { useState } from "react";
-import { ILocation } from "../types";
 interface IProps {
-  setLocation: React.Dispatch<React.SetStateAction<ILocation>>;
+  setPostcode: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export default function Inputs({ setLocation }: IProps): JSX.Element {
-  const [lat, setLat] = useState("");
-  const [long, setLong] = useState("");
+export default function Inputs({ setPostcode }: IProps): JSX.Element {
+  const [inputPostcode, setInputPostcode] = useState("");
+
+  function handleSubmit() {
+    fetch(`https://api.postcodes.io/postcodes/${inputPostcode}/validate`)
+      .then((res) => res.json())
+      .then((body) => {
+        if (body.result) {
+          setPostcode(inputPostcode);
+        } else {
+          window.alert("Enter a valid postcode");
+        }
+      });
+  }
 
   return (
     <>
       <div id="inputs">
         <input
-          placeholder="Latitude"
-          value={lat}
-          onChange={(e) => setLat(e.target.value)}
+          placeholder="Postcode"
+          value={inputPostcode}
+          onChange={(e) => setInputPostcode(e.target.value)}
         ></input>
-        <input
-          placeholder="Longitude"
-          value={long}
-          onChange={(e) => setLong(e.target.value)}
-        ></input>
-        <button
-          id="submit_button"
-          onClick={() => setLocation({ latitude: lat, longitude: long })}
-        >
+        <button id="submit_button" onClick={handleSubmit}>
           Submit
         </button>
       </div>
