@@ -20,8 +20,9 @@ input {
   width: 400px;
   margin: 5px;
   padding: 0px 15px;
-  border: 1px solid rgb(231, 229, 229);
+  border: 2px solid rgb(201, 196, 196);
   border-radius: 3px;
+  font-size: medium;
 }
 
 #submit_button {
@@ -31,6 +32,7 @@ input {
   color: white;
   border: 2px solid grey;
   border-radius: 5px;
+  font-size: medium;
 }
 
 #submit_button:hover {
@@ -43,7 +45,7 @@ input {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 30px;
-  font-size: x-large;
+  font-size: min(6vw, 28pt);
 }
 
 mark {
@@ -52,8 +54,9 @@ mark {
 
 .results {
   display: flex;
+  margin-top: 30px;
   width: 100vw;
-  height: 48vh;
+  height: 40vh;
   justify-content: center;
   align-items: center;
 }
